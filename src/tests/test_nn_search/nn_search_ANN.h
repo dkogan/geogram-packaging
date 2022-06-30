@@ -45,7 +45,7 @@
 
 #ifndef __NN_SEARCH_ANN__
 #include <geogram/points/nn_search.h>
-#include "third_party/ANN/ANN.h"
+#include "ANN/ANN.h"
 
 namespace GEO {
 

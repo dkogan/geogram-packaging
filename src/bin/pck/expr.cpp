@@ -3,8 +3,8 @@
 #include <geogram/basic/string.h>
 
 extern "C" {
-#include <geogram/third_party/lua/lauxlib.h>
-#include <geogram/third_party/lua/lualib.h>
+#include <geogram/third_party/lua5.4/lauxlib.h>
+#include <geogram/third_party/lua5.4/lualib.h>
 }
 
 

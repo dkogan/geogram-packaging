@@ -55,7 +55,7 @@
 // Visual C++ ver. < 2010 does not have C99 stdint.h,
 // using a fallback portable one.
 #if defined(GEO_OS_WINDOWS) && (_MSC_VER < 1600)
-#include <geogram/third_party/pstdint.h>
+#include <pstdint.h>
 #else
 #include <stdint.h>
 #endif

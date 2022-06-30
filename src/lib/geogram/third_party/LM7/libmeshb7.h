@@ -14,7 +14,6 @@
 /*----------------------------------------------------------*/
 
 /* [Bruno] get int64_t and PRINTF_INT64_MODIFIER */
-#include <geogram/third_party/pstdint.h> 
 
 /*----------------------------------------------------------*/
 /* Defines                                                  */

@@ -61,7 +61,7 @@ extern "C" {
 #define REAL double
 #define ANSI_DECLARATORS
 #define VOID void    
-#include <geogram/third_party/triangle/triangle.h>
+#include <triangle.h>
 }
 
 namespace GEO {

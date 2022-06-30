@@ -3,8 +3,6 @@
 
 configure_file(geogram.pc.in ${PROJECT_BINARY_DIR}/geogram${VORPALINE_VERSION_MAJOR}.pc @ONLY)
 
-add_subdirectory(third_party)
-
 aux_source_directories(SOURCES "Source Files"           .)
 aux_source_directories(SOURCES "Source Files\\basic"    basic)
 aux_source_directories(SOURCES "Source Files\\numerics" numerics)
@@ -17,6 +15,11 @@ aux_source_directories(SOURCES "Source Files\\NL"       NL)
 aux_source_directories(SOURCES "Source Files\\image"    image)
 aux_source_directories(SOURCES "Source Files\\parameterization" parameterization)
 aux_source_directories(SOURCES "Source Files\\bibliography" bibliography)
+aux_source_directories(SOURCES "Source Files\\rply"     third_party/rply)
+aux_source_directories(SOURCES "Source Files\\tetgen"   third_party/tetgen)
+aux_source_directories(SOURCES "Source Files\\xatlas"   third_party/xatlas)
+aux_source_directories(SOURCES "Source Files\\LM7"   third_party/LM7)
+aux_source_directories(SOURCES "Source Files\\PoissonRecon"   third_party/PoissonRecon)
 
 if(GEOGRAM_WITH_LUA)
    aux_source_directories(SOURCES "Source Files\\lua"      lua)
@@ -32,7 +35,7 @@ set_source_files_properties(version.h PROPERTIES GENERATED true)
 
 include_directories(${PROJECT_BINARY_DIR}/src/lib)
 
-add_library(geogram ${SOURCES} $<TARGET_OBJECTS:geogram_third_party>)
+add_library(geogram ${SOURCES})
 
 # Jeremie/Maxence: avoids the need to redeclare geogram include
 # path for targets that depend on geogram.
@@ -54,7 +57,7 @@ set_target_properties(geogram PROPERTIES
 		      FOLDER "GEOGRAM")
 
 if(UNIX AND VORPALINE_BUILD_DYNAMIC)
-    target_link_libraries(geogram pthread dl)
+    target_link_libraries(geogram pthread dl lua5.4 z triangle)
 endif()
 
 if(WIN32)

@@ -51,7 +51,7 @@
 extern "C" {
 #endif
 
-#include <geogram/third_party/lua/lua.h>
+#include <lua5.4/lua.h>
     
 /**
  * \file geogram_gfx/lua/lua_imgui.h

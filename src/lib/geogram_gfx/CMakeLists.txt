@@ -2,8 +2,6 @@ include(${PROJECT_SOURCE_DIR}/cmake/opengl.cmake)
 
 configure_file(geogram_gfx.pc.in ${PROJECT_BINARY_DIR}/geogram_gfx${VORPALINE_VERSION_MAJOR}.pc @ONLY)
 
-add_subdirectory(third_party)
-
 aux_source_directories(SOURCES "Source Files"                .)
 aux_source_directories(SOURCES "Source Files\\ImGui_ext"     ImGui_ext)
 aux_source_directories(SOURCES "Source Files\\api"           api)
@@ -22,7 +20,7 @@ if(GEOGRAM_USE_SYSTEM_GLFW3)
   add_definitions(-DGEO_USE_SYSTEM_GLFW3)
 endif()
 
-add_library(geogram_gfx ${SOURCES} $<TARGET_OBJECTS:geogram_gfx_third_party>)
+add_library(geogram_gfx ${SOURCES})
 
 if(ANDROID)
   target_include_directories(geogram_gfx PRIVATE

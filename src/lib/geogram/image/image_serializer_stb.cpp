@@ -67,8 +67,8 @@
 #endif
 #endif
 
-#include <geogram/third_party/stb_image/stb_image.h>
-#include <geogram/third_party/stb_image/stb_image_write.h>
+#include <stb/stb_image.h>
+#include <stb/stb_image_write.h>
 
 namespace GEO {
 

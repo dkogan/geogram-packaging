@@ -62,7 +62,7 @@ namespace GEO {
 #include <geogram/delaunay/delaunay.h>
 #include <geogram/NL/nl.h>
 #include <geogram/NL/nl_matrix.h>
-#include <geogram/third_party/HLBFGS/HLBFGS.h>
+#include <HLBFGS/HLBFGS.h>
 
 /**
  * \file exploragram/optimal_transport/optimal_transport.h

@@ -52,9 +52,9 @@
 #include <geogram/basic/memory.h>
 
 extern "C" {
-#include <geogram/third_party/lua/lua.h>    
-#include <geogram/third_party/lua/lauxlib.h>
-#include <geogram/third_party/lua/lualib.h>
+#include <lua5.4/lua.h>    
+#include <lua5.4/lauxlib.h>
+#include <lua5.4/lualib.h>
 }
 
 /**

@@ -113,8 +113,6 @@ if(GEOGRAM_WITH_VORPALINE)
    add_subdirectory(src/lib/vorpalib)
 endif()
 
-add_subdirectory(src/lib/third_party)
-
 if(GEOGRAM_WITH_GRAPHICS)
   add_subdirectory(src/lib/geogram_gfx)
 endif()

@@ -74,9 +74,9 @@
 #  include <geogram/lua/lua_io.h>
 
 extern "C" {
-#    include <geogram/third_party/lua/lua.h>    
-#    include <geogram/third_party/lua/lauxlib.h>
-#    include <geogram/third_party/lua/lualib.h>
+#    include <geogram/third_party/lua5.4/lua.h>    
+#    include <geogram/third_party/lua5.4/lauxlib.h>
+#    include <geogram/third_party/lua5.4/lualib.h>
 }
 
 #endif
