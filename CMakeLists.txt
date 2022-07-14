@@ -8,6 +8,8 @@
 # - it is the version that supports the command string(TIMESTAMP ...)
 cmake_minimum_required(VERSION 2.8.11)
 
+SET(CMAKE_CXX_FLAGS "-Wno-sign-conversion -Wno-sign-compare -Wno-conversion -Wno-sign-conversion -Wno-double-promotion")
+
 # Note: geogram.cmake defines GEOGRAM_WITH_VORPALINE
 # that we could have used instead,
 # but geogram.cmake needs to be included after the project() 
